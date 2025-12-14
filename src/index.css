@@ -22,29 +22,27 @@
   /* Fuentes */
   --font-sans: 'Inter', system-ui, sans-serif;
   --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
-  /* ANIMACIONES NUEVAS */
-  @keyframes shake {
-    0%, 100% { transform: translateX(0) rotate(-3deg); }
-    25% { transform: translateX(-5px) rotate(-3deg); }
-    75% { transform: translateX(5px) rotate(-3deg); }
-  }
-  
-  @keyframes bounceSlow {
-    0%, 100% { transform: translateY(0) rotate(3deg); }
-    50% { transform: translateY(-10px) rotate(3deg); }
-  }
 
+  /* VINCULACIÓN DE ANIMACIONES */
+  /* Aquí solo decimos "la variable --animate-shake usa la animación llamada shake" */
   --animate-shake: shake 0.4s ease-in-out infinite;
   --animate-bounce-slow: bounceSlow 2s ease-in-out infinite;
 }
-  /* Animaciones Custom */
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+
+/* --- LAS DEFINICIONES VAN AFUERA DEL THEME --- */
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0) rotate(-3deg); }
+  25% { transform: translateX(-5px) rotate(-3deg); }
+  75% { transform: translateX(5px) rotate(-3deg); }
 }
 
+@keyframes bounceSlow {
+  0%, 100% { transform: translateY(0) rotate(3deg); }
+  50% { transform: translateY(-10px) rotate(3deg); }
+}
+
+/* --- ESTILOS GENERALES --- */
 body {
   background-color: var(--color-background);
   color: #1e293b; /* Slate 800 para texto principal */

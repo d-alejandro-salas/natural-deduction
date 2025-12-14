@@ -7,4 +7,5 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: "/natural-deduction/", // <--- ¡ESTA ES LA LÍNEA QUE FALTABA!
 })
