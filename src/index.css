@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  /* Fondo blanco-azulado muy suave, parece papel premium */
+  --color-background: #f8fafc;
+  
+  /* Blanco puro para las tarjetas */
+  --color-surface:    #ffffff;
+  
+  /* Borde gris azulado suave */
+  --color-border:     #e2e8f0;
+  
+  /* Azul Real (Interesante y académico) */
+  --color-primary:    #3b82f6; 
+  
+  /* Verde esmeralda para éxitos */
+  --color-success:    #10b981;
+  
+  /* Rojo suave para errores */
+  --color-danger:     #ef4444;
+
+  /* Fuentes */
+  --font-sans: 'Inter', system-ui, sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  /* ANIMACIONES NUEVAS */
+  @keyframes shake {
+    0%, 100% { transform: translateX(0) rotate(-3deg); }
+    25% { transform: translateX(-5px) rotate(-3deg); }
+    75% { transform: translateX(5px) rotate(-3deg); }
+  }
+  
+  @keyframes bounceSlow {
+    0%, 100% { transform: translateY(0) rotate(3deg); }
+    50% { transform: translateY(-10px) rotate(3deg); }
+  }
+
+  --animate-shake: shake 0.4s ease-in-out infinite;
+  --animate-bounce-slow: bounceSlow 2s ease-in-out infinite;
+}
+  /* Animaciones Custom */
+  @keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  --animate-fade-in-up: fadeInUp 0.5s ease-out forwards;
+}
+
+body {
+  background-color: var(--color-background);
+  color: #1e293b; /* Slate 800 para texto principal */
+  min-height: 100vh;
+}
